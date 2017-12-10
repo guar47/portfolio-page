@@ -1,0 +1,15 @@
+{
+    "name": "portfolio-page",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "directories": {
+        "doc": "doc"
+    },
+    "author": "Dmitrii Pashutskii",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.18.13",
+        "gulp": "^3.9.1"
+    }
+}

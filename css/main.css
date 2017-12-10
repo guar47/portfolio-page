@@ -1,0 +1,92 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+div,
+ul,
+ol,
+li {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+body {
+    font-family: "Skia", Helvetica, sans-serif;
+    background: #f5f5f5 url(../img/white_wall_hash.png) top left repeat;
+}
+
+header {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 40px;
+}
+
+header a {
+    width: 395px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+.logo {
+    width: 48px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+}
+
+.hr-styled {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0));
+}
+
+.tagline {
+    padding: 10px 0 70px 0;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.skills,
+.education {
+    padding: 10px 8% 10px 8%;
+}
+
+.skills h2 {
+    padding: 0 3%;
+}
+
+.skill-set {
+    display: inline-block;
+    width: 20%;
+    padding: 0 3%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.skill-set:first-of-type {
+    padding: 0 3% 0 16%;
+}
+
+.skill-set h1 {
+    padding: 13px 0 24px 0;
+    font-weight: bold;
+}
+
+.education h2 {
+    padding: 0 3%;
+}
+
+.education-set {
+    padding: 0 16%;
+}
