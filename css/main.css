@@ -12,19 +12,62 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 30px 10px;
+    padding: 30px 0;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+.main-header {
+    width: 600px;
+    text-align: left;
+    display: inline-block;
     font-size: 40px;
 }
 
-header a {
-    width: 395px;
-    display: block;
+.main-header a {
     text-decoration: none;
     color: #000000;
 }
 
-header h1 {
+main {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 104px;
+}
+
+main h2 {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+nav {
+    width: 550px;
+    display: inline-block;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0 0 0 45px;
     display: inline-block;
 }
 
@@ -40,6 +83,13 @@ header h1 {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0));
 }
 
+.hr-styled-2 {
+    border: 0;
+    width: 150px;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0));
+}
+
 .tagline {
     padding: 10px 0 70px 0;
     font-size: 20px;
@@ -47,13 +97,18 @@ header h1 {
     width: 70%;
 }
 
+.tagline p {
+    margin: 30px 0 0 0;
+}
+
 .skills,
-.education {
+.education,
+.contacts {
     padding: 10px 8% 10px 8%;
 }
 
-.skills h2 {
-    padding: 0 3%;
+.skills {
+    height: 240px;
 }
 
 .skill-set {
@@ -73,13 +128,19 @@ header h1 {
     font-weight: bold;
 }
 
-.education-set {
+.education {
+    height: 470px;
+}
+
+.education-set,
+.contact-set {
     height: 130px;
     padding: 0 0 0 16%;
     vertical-align: top;
 }
 
 .education-set h1 {
+    font-weight: bold;
     padding: 0 0 10px 0;
 }
 
@@ -117,4 +178,30 @@ header h1 {
 
 .description p {
     padding: 0 0 10px 0;
+}
+
+.contacts {
+    height: 200px;
+}
+
+.contact-set {
+    width: 296px;
+}
+
+.contact-icon {
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 0 25px 0;
+    text-decoration: none;
+    color: #000000;
+}
+
+.contact-icon svg {
+    margin: 0 0 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 80px 0 15px 0;
 }

@@ -5,92 +5,128 @@
     <title>dpPortfolio page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
 <header>
-    <a href="index.html">
-        <img class="logo" src="img/dp_logo.png" alt="site dp logo">
-        <h1>Dmitrii Pashutskii</h1>
-    </a>
+    <div class="main-header">
+        <a href="index.html">
+            <img class="logo" src="img/dp_logo.png" alt="site dp logo">
+            <h1>Dmitrii Pashutskii</h1>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="page-link" href="#header">Me</a></li>
+            <li><a class="page-link" href="#skills">Skills</a></li>
+            <li><a class="page-link" href="#education">Education</a></li>
+            <li><a class="page-link" href="#contacts">Contact me</a></li>
+            <li><a href="https://guarblog.ru" target="_blank">My Blog</a></li>
+        </ul>
+    </nav>
 </header>
-<div class="tagline">
-    <p>I'm a software engineer located in Moscow, Russia. I currently work as an independent Front-End Developer. I'm
-        very
-        passionate about programming and IT world, actively developing my skills. </p>
-    <p>In my spare time I like reading books, learning English, travelling around the world, running and watching
-        football.</p>
-    <p> My life credo: striving for excellence.</p>
-</div>
-<hr class="hr-styled">
-<section class="skills">
-    <h2>My skills</h2>
-    <div class="skill-set">
-        <i class="fab fa-js-square fa-3x"></i>
-        <h1>Frontend Development</h1>
-        <p>JavaScript, HTML5, CSS3, Bootstrap, jQuery, Gulp, Responsive design, Photoshop</p>
+<main>
+    <div class="tagline" id="header">
+        <p>I'm a software engineer located in Moscow, Russia. I currently work as an independent Front-End Developer.
+            I'm
+            very
+            passionate about programming and IT world, actively developing my skills. </p>
+        <p>In my spare time I like reading books, learning English, travelling around the world, running and watching
+            football.</p>
+        <p> My life credo: striving for excellence.</p>
     </div>
-    <div class="skill-set">
-        <i class="fas fa-code fa-3x"></i>
-        <h1>Backend Development</h1>
-        <p>Node.js, PHP, Ruby, Python, SQL, Ruby on Rails, Yii</p>
-    </div>
-    <div class="skill-set">
-        <i class="fas fa-server fa-3x"></i>
-        <h1>DevOps</h1>
-        <p>Git, Docker, Databases, Web Servers, CI, UNIX</p>
-    </div>
-</section>
-<hr class="hr-styled">
-<section class="education">
-    <h2>Education</h2>
-    <div class="education-set">
-        <div class="img-header">
-            <i class="fas fa-graduation-cap fa-3x education-icon"></i>
-            <h1>Università degli Studi Guglielmo Marconi</h1>
-            <h2>Computer Engineering</h2>
-        </div>
-        <div class="description">
-            <p>2017 - 2020</p>
+    <hr class="hr-styled">
+    <section class="skills" id="skills">
+        <h2>My skills</h2>
+        <div class="skill-set">
+            <i class="fab fa-js-square fa-3x"></i>
+            <h1>Frontend Development</h1>
             <p>JavaScript, HTML5, CSS3, Bootstrap, jQuery, Gulp, Responsive design, Photoshop</p>
         </div>
-    </div>
-    <div class="education-set">
-        <div class="img-header">
-            <img src="img/codeschool_icon_64x64.png" alt="code school icon" class="education-icon">
-            <h1>CodeSchool</h1>
-            <h2>Software engineering course</h2>
+        <div class="skill-set">
+            <i class="fas fa-code fa-3x"></i>
+            <h1>Backend Development</h1>
+            <p>Node.js, PHP, Ruby, Python, SQL, Ruby on Rails, Yii</p>
         </div>
-        <div class="description">
-            <p>2017 - 2018</p>
-            <p>Great online courses that cover a large part of the technology used to develop web content.</p>
-            <a href="https://www.codeschool.com/users/guar47" target="blank">My progress report card</a>
+        <div class="skill-set">
+            <i class="fas fa-server fa-3x"></i>
+            <h1>DevOps</h1>
+            <p>Git, Docker, Databases, Web Servers, CI, UNIX</p>
         </div>
-    </div>
-    <div class="education-set">
-        <div class="img-header">
-            <i class="fab fa-free-code-camp fa-3x education-icon"></i>
-            <h1>FreeCodeCamp</h1>
-            <h2>Front End Development Certification</h2>
+    </section>
+    <hr class="hr-styled">
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-set">
+            <div class="img-header">
+                <i class="fas fa-graduation-cap fa-3x education-icon"></i>
+                <h1>Università degli Studi Guglielmo Marconi</h1>
+                <h3>Computer Engineering</h3>
+            </div>
+            <div class="description">
+                <p>2017 - 2020</p>
+                <p>JavaScript, HTML5, CSS3, Bootstrap, jQuery, Gulp, Responsive design, Photoshop</p>
+            </div>
         </div>
-        <div class="description">
-            <p>2017 - 2018</p>
-            <p>Community that helps learn to code and get experience by contributing to open source projects used by
-                nonprofits.
-                I learned FrontEnd Development here.</p>
-            <a href="https://www.freecodecamp.org/guar47" target="blank">My profile page</a>
+        <div class="education-set">
+            <div class="img-header">
+                <img src="img/codeschool_icon_64x64.png" alt="code school icon" class="education-icon">
+                <h1>CodeSchool</h1>
+                <h3>Software engineering course</h3>
+            </div>
+            <div class="description">
+                <p>2017 - 2018</p>
+                <p>Great online courses that cover a large part of the technology used to develop web content.</p>
+                <a href="https://www.codeschool.com/users/guar47" target="blank">My progress report card</a>
+            </div>
         </div>
-    </div>
-</section>
-<hr class="hr-styled">
-<section class="contacts">
+        <div class="education-set">
+            <div class="img-header">
+                <i class="fab fa-free-code-camp fa-3x education-icon"></i>
+                <h1>FreeCodeCamp</h1>
+                <h3>Front End Development Certification</h3>
+            </div>
+            <div class="description">
+                <p>2017 - 2018</p>
+                <p>Community that helps learn to code and get experience by contributing to open source projects used by
+                    nonprofits.
+                    I learned FrontEnd Development here.</p>
+                <a href="https://www.freecodecamp.org/guar47" target="blank">My profile page</a>
+            </div>
+        </div>
+    </section>
+    <hr class="hr-styled">
+    <section class="contacts" id="contacts">
+        <h2>Contact me</h2>
+        <div class="contact-set">
+            <a href="https://twitter.com/guar47" target="_blank" class="contact-icon">
+                <i class="fab fa-twitter-square fa-3x"></i>Twitter</a>
+            <a href="https://www.facebook.com/guar47" target="_blank" class="contact-icon">
+                <i class="fab fa-facebook-square fa-3x"></i>Facebook</a>
+            <a href="mailto:guar47@gmail.com" class="contact-icon">
+                <i class="fas fa-envelope-square fa-3x"></i>Mail</a>
+            <a href="http://t.me/guar47" target="_blank" class="contact-icon">
+                <i class="fab fa-telegram fa-3x"></i>Telegram</a>
+            <a href="https://github.com/guar47" target="_blank" class="contact-icon">
+                <i class="fab fa-github-square fa-3x"></i>GitHub</a>
+            <a href="https://linkedin.com/in/dmitrii-pashutskii" target="_blank" class="contact-icon">
+                <i class="fab fa-linkedin fa-3x"></i>LinkedIn</a>
+            <a href="https://medium.com/@guar47" target="_blank" class="contact-icon">
+                <i class="fab fa-medium fa-3x"></i>Medium</a>
+            <a href="skype:guar_dp?chat" class="contact-icon">
+                <i class="fab fa-skype fa-3x"></i>Skype</a>
+        </div>
+    </section>
 
-</section>
-<footer>
-
-</footer>
-
+    <footer>
+        <hr class="hr-styled-2">
+        (c) 2017. Dmitrii Pashutskii.
+    </footer>
+</main>
 </body>
 
 </html>
