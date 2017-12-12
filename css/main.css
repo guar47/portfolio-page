@@ -17,7 +17,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    right:0;
+    right: 0;
     background: #fff;
     box-shadow: 10px 10px 25px #13293D;
 }
@@ -37,16 +37,10 @@ header h1 {
     color: #13293D;
 }
 
-main {
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 104px;
-    color: #13293D;
-}
-
-main h2 {
-    font-weight: bold;
-    font-size: 17px;
+.logo {
+    width: 48px;
+    height: 35px;
+    padding: 0 10px 0 10px;
 }
 
 nav {
@@ -68,7 +62,6 @@ nav ul {
 }
 
 nav li {
-    /*padding: 10px 20px 10px 20px;*/
     margin: 0 20px 0 0;
     display: inline-block;
     background: #13293D;
@@ -81,24 +74,16 @@ nav li:hover {
     box-shadow: 0 5px 15px rgba(0, 100, 148, 1);
 }
 
-.logo {
-    width: 48px;
-    height: 35px;
-    padding: 0 10px 0 10px;
-}
-
-.hr-styled {
-    border: 0;
-    height: 1px;
+main {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 104px;
     color: #13293D;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
 }
 
-.hr-styled-2 {
-    border: 0;
-    width: 150px;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
+main h2 {
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .tagline {
@@ -219,4 +204,18 @@ nav li:hover {
 footer {
     text-align: center;
     padding: 80px 0 15px 0;
+}
+
+.hr-styled {
+    border: 0;
+    height: 1px;
+    color: #13293D;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
+}
+
+.hr-styled-2 {
+    border: 0;
+    width: 150px;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
 }
