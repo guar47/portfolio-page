@@ -3,7 +3,6 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li {
     border: 0;
     margin: 0;
     font: inherit;
-    font-size: 100%;
 }
 
 body {
@@ -13,7 +12,6 @@ body {
 
 header {
     padding: 30px 20px;
-    height: 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,9 +25,8 @@ header h1 {
 }
 
 .main-header {
-    width: 400px;
     display: inline-block;
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 .main-header a {
@@ -44,17 +41,15 @@ header h1 {
 }
 
 nav {
-    width: 600px;
     display: inline-block;
-    right: 0;
     float: right;
 }
 
 nav a {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     color: #EAF2F3;
-    display: block
+    display: block;
 }
 
 nav ul {
@@ -65,6 +60,7 @@ nav li {
     margin: 0 20px 0 0;
     display: inline-block;
     background: #13293D;
+    border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 1px 2px rgba(0, 100, 148, 0.15);
     transition: box-shadow 0.3s ease-in-out;
@@ -74,21 +70,26 @@ nav li:hover {
     box-shadow: 0 5px 15px rgba(0, 100, 148, 1);
 }
 
+.toggle-nav {
+    display: none;
+}
+
 main {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 104px;
     color: #13293D;
+    transition: margin-top .3s linear 0s;
 }
 
 main h2 {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 1.0625em;
 }
 
 .tagline {
     padding: 10px 0 70px 0;
-    font-size: 20px;
+    font-size: 1.25em;
     margin: 0 auto;
     width: 70%;
 }
@@ -185,7 +186,7 @@ main h2 {
 }
 
 .contact-set {
-    width: 296px;
+    width: 32%;
 }
 
 .contact-icon {
@@ -218,4 +219,104 @@ footer {
     width: 150px;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
+}
+
+@media screen and (max-width: 1090px) {
+    nav a {
+        padding: 7px 12px;
+    }
+
+    nav li {
+        margin: 0 10px 0 0;
+    }
+
+    .contact-set {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .contact-set {
+        width: 45%;
+    }
+
+    nav {
+        animation: slide-down-revert .3s linear 0s;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    nav.active {
+        width: 100%;
+        animation: slide-down .3s linear 0s;
+    }
+
+    nav.active li {
+        margin: 0 auto;
+        display: block;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    nav.active li:first-of-type {
+        border-radius: 7px 7px 0 0;
+    }
+
+    nav.active li:last-of-type {
+        border-radius: 0 0 7px 7px;
+    }
+
+    nav.active li:hover {
+        box-shadow: none;
+    }
+
+    nav.active a {
+        text-align: center;
+    }
+
+    main.active {
+        margin-top: 254px;
+        transition: margin-top .3s linear 0s;
+    }
+
+    .toggle-nav {
+        float: right;
+        display: inline-block;
+        border-radius: 6px;
+        padding: 7px 12px;
+        text-decoration: none;
+        background: #13293D;
+        color: #EAF2F3;
+        font-size: 1.25em;
+        box-shadow: 0 1px 2px rgba(0, 100, 148, 0.15);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .toggle-nav:hover {
+        box-shadow: 0 5px 15px rgba(0, 100, 148, 1);
+    }
+
+    @keyframes slide-down {
+        from {
+            /*transform: translateY(-100%);*/
+            height: 0;
+        }
+        to {
+            /*transform: translateY(0);*/
+            height: 150px;
+        }
+    }
+
+    @keyframes slide-down-revert {
+        from {
+            /*transform: translateY(-100%);*/
+            height: 150px;
+        }
+        to {
+            /*transform: translateY(0);*/
+            height: 0;
+        }
+    }
 }
