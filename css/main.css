@@ -204,7 +204,7 @@ main h2 {
     padding: 0 0 25px 0;
     text-decoration: none;
     color: #006494;
-    transition: color 0.3s ease-in-out;;
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-icon span {
@@ -217,7 +217,13 @@ main h2 {
 
 .contact-icon svg {
     margin: 0 0 10px 0;
+    transition: transform .3s ease-in-out;
 }
+
+.contact-icon:hover svg {
+    transform: scale(1.2);
+}
+
 
 footer {
     text-align: center;
