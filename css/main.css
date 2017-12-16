@@ -203,11 +203,16 @@ main h2 {
     text-align: center;
     padding: 0 0 25px 0;
     text-decoration: none;
+    color: #006494;
+    transition: color 0.3s ease-in-out;;
+}
+
+.contact-icon span {
     color: #13293D;
 }
 
-.contact-awesome-icon {
-    color: #006494;
+.contact-icon:hover {
+    color: #13293D;
 }
 
 .contact-icon svg {

@@ -1,15 +1,21 @@
 $(document).ready(() => {
   const nav = $('nav');
 
-  nav.find('li.page-link').click(function (e) {
+  function scrollAnimate(e) {
     e.preventDefault();
     const section = $(this).find('a').attr('href');
     $('html, body').animate({
       scrollTop: $(section).offset().top - $('header').outerHeight(),
     });
-  });
+  }
 
-  $('.toggle-nav').click(function (e) {
+  function toggleNav() {
+    if ($(this).hasClass('revert')) {
+      $('nav').toggleClass('revert active');
+    }
+  }
+
+  $('.toggle-nav').click((e) => {
     e.preventDefault();
     if (!nav.hasClass('active')) {
       nav.toggleClass('active');
@@ -19,9 +25,6 @@ $(document).ready(() => {
     $('main').toggleClass('active');
   });
 
-  nav.on('animationend', function () {
-    if ($(this).hasClass('revert')) {
-      $('nav').toggleClass('revert active');
-    }
-  });
+  nav.find('li.page-link').click(scrollAnimate);
+  nav.on('animationend', toggleNav);
 });
