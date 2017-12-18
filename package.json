@@ -8,9 +8,14 @@
     },
     "author": "Dmitrii Pashutskii",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/guar47/portfolioPage.git"
+    },
     "devDependencies": {
         "browser-sync": "^2.18.13",
-        "gulp": "^3.9.1"
+        "gulp": "^3.9.1",
+        "gulp-sass": "^3.1.0"
     },
     "dependencies": {}
 }

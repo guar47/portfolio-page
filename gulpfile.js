@@ -1,37 +1,35 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync');
-
-const reload = browserSync.reload;
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 
 const paths = {
-    html: ['index.html'],
-    css: ['css/main.css'],
+  html: ['*.html'],
+  css: 'css',
+  sass: ['css/*.scss'],
+  js: ['js/script.js'],
 };
 
-gulp.task('css', () => gulp.src(paths.css)
-    .pipe(reload({
-        stream: true,
-    })));
+gulp.task('js', () => gulp.src(paths.js)
+  .pipe(browserSync.stream()));
 
 gulp.task('html', () => gulp.src(paths.html)
-    .pipe(reload({
-        stream: true,
-    })));
+  .pipe(browserSync.stream()));
 
-gulp.task('browserSync', () => {
-    browserSync({
-        server: {
-            baseDir: './',
-        },
-        port: 8080,
-        open: true,
-        notify: false,
-    });
+gulp.task('sass', () => gulp.src(paths.sass)
+  .pipe(sass())
+  .pipe(gulp.dest(paths.css))
+  .pipe(browserSync.stream()));
+
+gulp.task('serve', ['sass', 'html', 'js'], () => {
+  browserSync.init({
+    server: './',
+    open: false,
+    notify: false,
+  });
+
+  gulp.watch(paths.js, ['js']);
+  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.html, ['html']);
 });
 
-gulp.task('watcher', () => {
-    gulp.watch(paths.css, ['css']);
-    gulp.watch(paths.html, ['html']);
-});
-
-gulp.task('default', ['watcher', 'browserSync']);
+gulp.task('default', ['serve']);
