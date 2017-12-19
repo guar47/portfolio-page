@@ -23,6 +23,7 @@ $menuShadowHider: 0 1px 2px rgba(0, 100, 148, 0.55);
 $menuShadowFull: 0 5px 15px rgba(0, 100, 148, 1);
 $menuShadowAnimation: box-shadow 0.3s ease-in-out;
 $hrGradient: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90), rgba(0, 0, 0, 0));
+
 @mixin hrStyled($width: auto) {
   border: 0;
   height: 1px;
@@ -35,6 +36,10 @@ $hrGradient: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(19, 41, 61, 0.90),
   @media screen and (max-width: $query) {
     @content
   }
+}
+
+%line-height {
+  line-height: 1.5;
 }
 
 body {
@@ -52,6 +57,7 @@ header {
   box-shadow: 10px 10px 25px $bigStoneColor;
   h1 {
     display: inline-block;
+    font-family: 'Reenie Beanie', cursive;
   }
   .short-header {
     display: none;
@@ -66,7 +72,7 @@ header {
   }
   .main-header {
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 3.2em;
     a {
       text-decoration: none;
       color: $bigStoneColor;
@@ -124,6 +130,7 @@ main {
   font-size: 1.25em;
   margin: 0 auto;
   width: 70%;
+  @extend %line-height;
   p {
     margin: 30px 0 0 0;
   }
@@ -148,6 +155,7 @@ main {
   padding: 0 3%;
   vertical-align: top;
   text-align: center;
+  @extend %line-height;
   &:first-of-type {
     padding: 0 3% 0 16%;
   }
@@ -169,6 +177,7 @@ main {
   padding: 0 0 0 16%;
   vertical-align: top;
   margin: 0 0 50px 0;
+  @extend %line-height;
   h1 {
     font-weight: bold;
     padding: 0 0 10px 0;
